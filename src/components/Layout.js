@@ -30,7 +30,7 @@ function Layout({ children }) {
   return (
     <div>
       {/* content */}
-      <div className="">{children}</div>
+      <div className="pb-44">{children}</div>
 
       {/* footer */}
       <div className="fixed left-0 right-0 bottom-10">
