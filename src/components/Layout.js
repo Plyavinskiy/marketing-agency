@@ -30,13 +30,16 @@ function Layout({ children }) {
   return (
     <div>
       {/* content */}
-      <div className="pb-44">{children}</div>
+      <div className="pb-44 overflow-x-hidden">{children}</div>
 
       {/* footer */}
       <div className="fixed left-0 right-0 bottom-10">
         <div className="flex justify-center w-full">
           {menuItems.map((item, index) => (
-            <div key={item.title} className="flex flex-col items-center justify-end">
+            <div
+              key={item.title}
+              className="flex flex-col items-center justify-end"
+            >
               {location.pathname === item.path && (
                 <div className="flex flex-col items-center">
                   <div className="h-5 w-10 bg-primary rounded-t-full"></div>
