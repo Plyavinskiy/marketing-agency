@@ -1,11 +1,14 @@
 import React from "react";
 
 import Layout from "../../components/Layout";
+import Intro from "./Intro";
 
 function Home() {
   return (
     <Layout>
-      <div>Home</div>
+      <div className="px-32">
+        <Intro />
+      </div>
     </Layout>
   );
 }
