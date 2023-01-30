@@ -2,8 +2,8 @@ import React from "react";
 
 function WhyMarketing() {
   return (
-    <div className="mt-20 relative">
-      <h2 className="text-center text-8xl font-semibold text-primary">
+    <div className="mt-20 relative sm:px-5">
+      <h2 className="text-center text-8xl font-semibold text-primary sm:text-5xl">
         Why <b className="text-secondary">Marketing</b>?
       </h2>
       <div className="h-[500px] absolute top-0 left-0 right-0 z-10">
@@ -15,7 +15,7 @@ function WhyMarketing() {
           autoplay
         ></lottie-player>
       </div>
-      <p className="text-gray-600 text-md mt-[380px]">
+      <p className="text-gray-600 text-md mt-[380px] sm:mt-[320px]">
         Do you know what your customers want? Do you think your customers trust
         your products? When was the last time you saw a customer tweeting about
         your product or service? Was it a complaint or compliment?
