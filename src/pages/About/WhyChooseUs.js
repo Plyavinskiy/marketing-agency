@@ -23,11 +23,11 @@ const advantages = [
 
 function WhyChooseUs() {
   return (
-    <div className="mx-32 mt-20 ">
+    <div className="mx-32 sm:mx-3 mt-20">
       <div className="bg-primary h-72 w-full flex justify-center items-center">
-        <h2 className="text-7xl font-semibold text-white">Why Choose Us</h2>
+        <h2 className="text-7xl font-semibold text-white sm:text-4xl">Why Choose Us</h2>
       </div>
-      <div className="grid grid-cols-3 p-5 gap-5 border shadow">
+      <div className="grid grid-cols-3 sm:grid-cols-1 p-5 gap-5 border shadow">
         {advantages.map((advantage) => (
           <div
             key={advantage.title}
