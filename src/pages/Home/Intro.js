@@ -2,13 +2,13 @@ import React from "react";
 
 const Intro = () => {
   return (
-    <div className="grid grid-cols-2 h-screen items-center">
+    <div className="grid grid-cols-2 sm:grid-cols-1 h-screen items-center sm:mt-20 sm:px-5">
       <div className="flex flex-col space-y-10">
-        <h1 className="text-7xl font-semibold text-primary">
+        <h1 className="text-7xl font-semibold text-primary sm:text-6xl">
           The best <br />
           <b className="text-secondary">marketing</b>
         </h1>
-        <h2 className="text-5xl font-semibold text-primary">
+        <h2 className="text-4xl font-semibold text-primary">
           Doesn't feel like marketing
         </h2>
         <button className="px-16 py-5 bg-secondary text-xl text-white max-w-max hover:bg-primary">
