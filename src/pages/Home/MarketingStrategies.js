@@ -29,11 +29,11 @@ const strategies = [
 
 function MarketingStrategies() {
   return (
-    <div>
-      <h2 className="text-5xl font-semibold text-primary">
+    <div className="sm:px-5">
+      <h2 className="text-3xl font-semibold text-primary sm:mt-10">
         Want to boost your business growth?
       </h2>
-      <h2 className="text-7xl font-semibold text-primary mt-10">
+      <h2 className="text-7xl font-semibold text-primary mt-10 sm:text-5xl">
         The <b className="text-secondary">SOLUTION</b> is here...
       </h2>
       <p className="text-gray-600 text-xl mt-10">
@@ -44,11 +44,14 @@ function MarketingStrategies() {
         Here's what we found, in no particular order:
       </p>
 
-      <div className="grid grid-cols-2 gap-20 mt-16">
+      <div className="grid grid-cols-2 sm:grid-cols-1 gap-20 mt-16">
         {strategies.map((strategy) => {
           return (
-            <div key={strategy.title} className="border border-primary p-5 flex flex-col space-y-10 rounded transform hover:scale-105 duration-300">
-              <h2 className="mx-20 text-center -mt-8 bg-white border-primary font-semibold border text-2xl rounded text-secondary py-2">
+            <div
+              key={strategy.title}
+              className="border border-primary p-5 flex flex-col space-y-10 rounded transform hover:scale-105 duration-300"
+            >
+              <h2 className="mx-20 sm:mx-5 text-center -mt-8 bg-white border-primary font-semibold border text-2xl rounded text-secondary py-2">
                 {strategy.title}
               </h2>
               <img
