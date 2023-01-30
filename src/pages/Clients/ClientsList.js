@@ -65,27 +65,30 @@ function ClientsList() {
 
   return (
     <div>
-      <div className="bg-primary h-44 rounded-b-full"></div>
-      <div className="flex justify-center -mt-44 items-end space-x-10">
+      <div className="bg-primary h-44 rounded-b-full sm:rounded-b-2xl"></div>
+      <div className="flex justify-center -mt-44 items-end space-x-10 sm:space-x-0 sm:p-5">
         {selectedClientIndex !== 0 && (
           <i
-            className="ri-arrow-left-line text-4xl text-gray-600 cursor-pointer"
+            className="ri-arrow-left-line text-4xl text-gray-600 cursor-pointer sm:hidden"
             onClick={getPreviousClientHandler}
           ></i>
         )}
 
-        <div className="grid grid-cols-3 gap-10">
+        <div className="grid grid-cols-3 sm:grid-cols-1 gap-10 sm:gap-2">
           {[
             clients[selectedClientIndex],
             clients[selectedClientIndex + 1],
             clients[selectedClientIndex + 2],
           ].map((client) => (
-            <div key={client.name} className="bg-white shadow p-5 w-[400px] border h-[350px]">
-              <div className="flex space-x-10 items-center justify-between">
+            <div
+              key={client.name}
+              className="bg-white shadow p-5 w-[400px] sm:w-auto border h-[350px] sm:h-auto"
+            >
+              <div className="flex space-x-10 sm:space-x-0 items-center justify-between sm:flex-col">
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="h-32 w-32"
+                  className="h-32 w-32 sm:h-10 sm:w-10"
                 />
                 <h2 className="text-primary font-semibold text-2xl">
                   {client.name}
@@ -100,7 +103,7 @@ function ClientsList() {
 
         {selectedClientIndex < 4 && (
           <i
-            className="ri-arrow-right-line text-4xl text-gray-600 cursor-pointer"
+            className="ri-arrow-right-line text-4xl text-gray-600 cursor-pointer sm:hidden"
             onClick={getNextClientHandler}
           ></i>
         )}
@@ -110,8 +113,8 @@ function ClientsList() {
         <div className="flex space-x-2">
           {[1, 2, 3, 4, 5].map((item, index) => (
             <div
-            key={item}
-            onClick={() => setSelectedClientIndex(index)}
+              key={item}
+              onClick={() => setSelectedClientIndex(index)}
               className={`bg-gray-200 h-4 w-4 rounded-full cursor-pointer hover:scale-105 transform duration-300 ${
                 selectedClientIndex === index && "border-2 border-secondary"
               }`}
