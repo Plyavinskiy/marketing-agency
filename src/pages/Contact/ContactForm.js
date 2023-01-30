@@ -8,7 +8,7 @@ function ContactForm() {
           Send a Message
         </h2>
 
-        <div className="flex space-x-10">
+        <div className="flex sm:flex-col space-x-10 sm:space-x-0 sm:space-y-10">
           <input
             type="text"
             placeholder="First Name"
@@ -21,7 +21,7 @@ function ContactForm() {
           />
         </div>
 
-        <div className="flex space-x-10">
+        <div className="flex sm:flex-col space-x-10 sm:space-x-0 sm:space-y-10">
           <input
             type="text"
             placeholder="Email"
