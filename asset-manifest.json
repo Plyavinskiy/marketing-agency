@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/marketing-agency/static/css/main.57988f98.css",
+    "main.js": "/marketing-agency/static/js/main.a9b988cf.js",
+    "static/media/about-intro.svg": "/marketing-agency/static/media/about-intro.dc99b53cb7b13dc86ebd8c92362f897c.svg",
+    "index.html": "/marketing-agency/index.html",
+    "main.57988f98.css.map": "/marketing-agency/static/css/main.57988f98.css.map",
+    "main.a9b988cf.js.map": "/marketing-agency/static/js/main.a9b988cf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.57988f98.css",
+    "static/js/main.a9b988cf.js"
+  ]
+}
