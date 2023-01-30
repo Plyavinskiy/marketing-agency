@@ -73,27 +73,51 @@ function ClientsList() {
             onClick={getPreviousClientHandler}
           ></i>
         )}
-        <div className="bg-white shadow p-5 w-[500px] border h-[350px]">
-          <div className="flex space-x-10 items-center justify-between">
-            <h2 className="text-primary font-semibold text-2xl">
-              {clients[selectedClientIndex].name}
-            </h2>
-            <img
-              src={clients[selectedClientIndex].logo}
-              alt={clients[selectedClientIndex].name}
-              className="h-32 w-32"
-            />
-          </div>
-          <p className="text-gray-600 text-md mt-10">
-            {clients[selectedClientIndex].description}
-          </p>
+
+        <div className="grid grid-cols-3 gap-10">
+          {[
+            clients[selectedClientIndex],
+            clients[selectedClientIndex + 1],
+            clients[selectedClientIndex + 2],
+          ].map((client) => (
+            <div key={client.name} className="bg-white shadow p-5 w-[400px] border h-[350px]">
+              <div className="flex space-x-10 items-center justify-between">
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  className="h-32 w-32"
+                />
+                <h2 className="text-primary font-semibold text-2xl">
+                  {client.name}
+                </h2>
+              </div>
+              <p className="text-gray-600 text-md mt-10">
+                {client.description}
+              </p>
+            </div>
+          ))}
         </div>
-        {selectedClientIndex !== clients.length - 1 && (
+
+        {selectedClientIndex < 4 && (
           <i
             className="ri-arrow-right-line text-4xl text-gray-600 cursor-pointer"
             onClick={getNextClientHandler}
           ></i>
         )}
+      </div>
+
+      <div className="flex justify-center mt-10">
+        <div className="flex space-x-2">
+          {[1, 2, 3, 4, 5].map((item, index) => (
+            <div
+            key={item}
+            onClick={() => setSelectedClientIndex(index)}
+              className={`bg-gray-200 h-4 w-4 rounded-full cursor-pointer hover:scale-105 transform duration-300 ${
+                selectedClientIndex === index && "border-2 border-secondary"
+              }`}
+            ></div>
+          ))}
+        </div>
       </div>
     </div>
   );
